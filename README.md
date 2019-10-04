@@ -56,7 +56,7 @@ Right now G. Wiz has `$184.80` in his account. Help him by writing a program tha
 
 ## Required Deliverables
 
-### `BankAccount.java`:
+### `BankAccount.java`
 
 - [ ] Exists, untouched
 
