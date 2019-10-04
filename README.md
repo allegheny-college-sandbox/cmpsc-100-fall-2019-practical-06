@@ -56,16 +56,16 @@ Right now G. Wiz has `$184.80` in his account. Help him by writing a program tha
 
 ## Required Deliverables
 
-`BankAccount.java`:
+### `BankAccount.java`:
 
 - [ ] Exists, untouched
 
-`Bill.java`
+### `Bill.java`
 
 - [ ] Exists
 - [ ] Implements `NumberFormat.getCurrencyInstance()` (see `BankAccount.java`)
 
-`GatorAccount.java`
+### `GatorAccount.java`
 - [ ] Implements the `BankAccount` `object`, with a `startingBalance`
 - [ ] Implements the `Bill` `object` with a `payee`, `amount`, and `date`
 - [ ] Uses the above-created `BankAccount` `object` to perform a `debit`
@@ -75,9 +75,15 @@ Right now G. Wiz has `$184.80` in his account. Help him by writing a program tha
 * due date using the correct method in `Bill.java`
 * amount remaining in the account using the correct method in `BankAccount.java`
 
+The below snippet is an example of the output:
+
 ```
 Subtracting a $149.23 bill from Wiz Hats Unlimited (payable on 9/14/19) you have: $35.57
 ```
+
+### Testing your project
+
+Use `gradle run --args="184.80"` to pass the Gator's bank balance (which he usually keeps diligently in a checkbook register) to the `GatorAccount.java` program.
 
 ## GatorGrader
 
