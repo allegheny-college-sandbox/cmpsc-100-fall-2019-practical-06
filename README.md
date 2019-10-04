@@ -1,9 +1,9 @@
-# CMPSC 100-03 Practical Session 5
+# CMPSC 100-03 Practical Session 6
 
-This practical engages with concepts underpinning the use of `method`s and `class`es in Java. In particular, today you will work with the `Random` class, `Scanner` class, their methods, and an additional method identified by the `encounterReport` identifier. 
+This practical will deepen your code reading skills by asking you to read and implement two `classes` managing a bank account `object` and a bill `object`.
 
-* Assigned: Friday, 27 September 2019
-* Due: Monday 30 September 2019
+* Assigned: Friday, 4 October 2019
+* Due: Monday, 7 October 2019
 * Point value: 15 points
 
 # General guidelines for practical sessions
@@ -19,7 +19,7 @@ This practical engages with concepts underpinning the use of `method`s and `clas
 * [Cloning your repository](#cloning-your-repository)
 * [Slack](#slack)
 * [Github](#github)
-* [HumanQuest: Part 1](#humanquest-part-1)
+* [Bills, Bills, Bills](#bills-bills-bills)
 * [GatorGrader](#gatorgrader)
 * [`commit` your work](#commit-your-work)
 
@@ -39,67 +39,45 @@ Before beginning the practical session, log into our shared [Slack](https://cmps
 
 An individualized version of this assignment is available on our GitHub Classroom platform. The link for accepting your individual repository is in the `#practicals` channel of our [Slack](#slack).
 
-## HumanQuest: Part 1
+## Bills, Bills, Bills
 
-All across the Gator Kingdom, gators have become obsessed with "HumanQuest," a game in which gator-kind attempts to role-play situations from the human world which are _as boring and mundane as possible_. These include the perils of office small talk, engaging in fierce office politics battles, and various encounters with formidable office woes.
+G. Wiz and his friends are grateful that, though they were charmed by The Boss, their game of HumanQuest is under control. However, he was so engrosssed in the game that he forgot to pay attention to what was going on in his very real gator world. He's been sent a bill by his hat store, Wiz Hats Unlimited, and it's overdue! He has to pay it right away. However, he's not so sure he'll have enough money.
 
-The game is played with different dice, but when doing battle with office supplies, the game requires that players roll a 13-sided die. (Of course, this kind of thing is only possible in the Gator World.) As luck would have it, the game is so popular that all of the dice have sold out.
+Right now G. Wiz has `$184.80` in his account. Help him by writing a program that uses `GatorAccount.java` to:
 
-G. Wiz and friends have started to explore ways that they can play the game without having the dice they need to play, and this program is one attempt to solve their problem.
+* Implement the `BankAccount` class in `BankAccount`.java
+* Implement the `Bill` class in `Bill.java`
+* Subtract the bill amount from the bank account
+* Display the result with the following fields from the bill:
+    * Amount
+    * Payee
+    * Due date
+* Display amount remaining in bank account after subtracting the bill
 
-### The given situation
+## Required Deliverables
 
-You've been given code that represents as far as the gators have gotten with their solution. While they know, in principle, what they need to do to complete it, they're all busy gators. If someone else can finish this program for them either before or on the weekend, they can plan the game.
+`BankAccount.java`:
 
-While code outside of the following block needs completed, pay attention to where the bulk of the work has to take place:
+- [ ] Exists, untouched
 
-```java
-    // TODO Perform first encounter
-    String encounter = // Get encounter title
-    int checkRoll = // Get value for check roll
-    scanner.nextLine(); // Move scanner along
-    int result = // Make 13-sided die roll
-    /*
-     * TODO Display the encounterReport
-     */
-    // TODO Perform next encounter
-    encounter = // Get encounter title
-    checkRoll = // Get value for check roll
-    result = // Make 13-sided die roll
-    // Display the encounterReport
-    /*
-     * TODO Display the encounterReport
-     */
+`Bill.java`
+
+- [ ] Exists
+- [ ] Implements `NumberFormat.getCurrencyInstance()` (see `BankAccount.java`)
+
+`GatorAccount.java`
+- [ ] Implements the `BankAccount` `object`, with a `startingBalance`
+- [ ] Implements the `Bill` `object` with a `payee`, `amount`, and `date`
+- [ ] Uses the above-created `BankAccount` `object` to perform a `debit`
+- [ ] Prints the following using:
+* the bill `amount`
+* the `payee` name
+* due date using the correct method in `Bill.java`
+* amount remaining in the account using the correct method in `BankAccount.java`
+
 ```
-
-Note that _all variable identifiers_ have been given to you but the methods and other statements that need to come into play are missing. It's up to you to:
-
-* Read the file initialized with the scanner and implement the appropriate methods to get the requested values.
-    * This may require opening the input file to look at its format.
-* Use the above-retrieved values to populate the variables
-* Use the `Random` class to make two (2) rolls of the 13-sided die.
-    * Remember that Java is a 0-indexed language. What does this mean for our rolls?
-
-### The finished product
-
-- [ ] A single file, `EncounterCheck.java` which builds and runs successfully
-- [ ] Implements the `java.util` class for providing the `Scanner` class
-- [ ] Contains the correct amount of `scanner` methods for retrieving correct information
-- [ ] Uses the `Random` class to perform two 13-sided die rolls
-- [ ] Contains two (2) calls to the `encounterReport` method
-- [ ] Command output matching the following exactly:
+Subtracting a $149.23 bill from Wiz Hats Unlimited (payable on 9/14/19) you have: $35.57
 ```
-To defeat the paper jam:
-Gator needed to roll    12
-Gator's actual roll     9
-To defeat the typo avalanche:
-Gator needed to roll    100
-Gator's actual roll     6
-```
-* **Hint:** This uses a control character
-- [ ] Removes all `TODO` statements
-- [ ] Replaces any other `{}` placeholders with appropriate replacements
-- [ ] Repository has two (2) `commit`s
 
 ## GatorGrader
 
